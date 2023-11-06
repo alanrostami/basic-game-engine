@@ -37,7 +37,7 @@ private:
 	{}
 
 	void processInput();
-	void update();
+	void update(float dt);
 	void render();
 
 	bool isRunning;
