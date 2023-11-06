@@ -1,8 +1,13 @@
-#include <iostream>
-#include <SDL.h>
+#include "Game.h"
 
 int main(int argc, char** argv)
 {
-	std::cout << "Game Engine Actor Component" << std::endl;
+	bool isGameInit = Game::instance().initialize();
+	if (isGameInit)
+	{
+		Game::instance().loop();
+	}
+	Game::instance().close();
+
 	return 0;
 }
